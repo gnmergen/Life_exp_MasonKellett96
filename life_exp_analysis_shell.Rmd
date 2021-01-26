@@ -32,3 +32,15 @@ data %>%
   sumdat
 ```
 
+```{r mergenedit, echo=TRUE}
+ggplot(sumdat, mapping = aes(x = year, y = lifeExp, color = country))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE, color = "steelblue", size = 1.2)+
+  theme_minimal()+
+  labs(title = "OLS Plot",
+       x = "Year",
+       y = "Maximum Life Expectancy")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+
